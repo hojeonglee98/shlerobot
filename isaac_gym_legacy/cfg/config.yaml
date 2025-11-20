@@ -1,0 +1,29 @@
+
+# Default config
+defaults:
+  - task: So100Tracking
+  - train: So100TrackingPPO
+  - hydra/job_logging: disabled
+
+# Experiment params
+experiment: ''
+
+# Physics params
+physics_engine: 'physx'
+pipeline: 'gpu'
+sim_device: 'cuda:0'
+rl_device: 'cuda:0'
+graphics_device_id: 0
+
+# Run params
+headless: False
+test: False
+checkpoint: ''
+seed: 42
+num_envs: 512
+
+# Hydra setup
+hydra:
+  output_subdir: null
+  run:
+    dir: .
